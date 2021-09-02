@@ -1,0 +1,22 @@
+i,j=nums1[0],nums2[0]
+        res=[]
+        a=True
+        while a:
+            if i in range(len(nums1)) and j in range(len(nums2)):
+                res.append(min(nums1[i],nums2[j]))
+                if min(nums1[i],nums2[j])==nums1[i]:
+                    i+=1
+                else:
+                    j+=1
+            elif i not in range(len(nums1)) and j in range(len(nums2)):
+                res.append(nums2[j])
+                j+=1
+            elif i in range(len(nums1)) and j not in range(len(nums2)):
+                res.append(nums1[i])
+                i+=1
+            else:
+                a=False
+        if len(res)%2==0:
+            return res[((len(res)+1//2)+(len(res)-1//2))//2]
+        else:
+            return res[len(res)//2]
