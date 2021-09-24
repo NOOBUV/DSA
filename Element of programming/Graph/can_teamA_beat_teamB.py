@@ -1,6 +1,7 @@
 import collections
 """basically this question is of simple dfs the question asks whether,
      teamA can reach teamB or not?"""
+"""dfs and bfs both can be used code is below"""
 
 
 def can_teamA_beat_teamB(matches, teamA, teamB):
